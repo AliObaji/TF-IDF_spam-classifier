@@ -16,8 +16,8 @@ def plain(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
     
-    return accuracy_score(y_test, y_pred);
-    #return confusion_matrix(y_test, y_pred)
+    #return accuracy_score(y_test, y_pred);
+    return confusion_matrix(y_test, y_pred)
     
     
 def medium_cleanup(data):
@@ -31,8 +31,8 @@ def medium_cleanup(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
         
-    return accuracy_score(y_test, y_pred);
-    #return confusion_matrix(y_test, y_pred)
+    #return accuracy_score(y_test, y_pred);
+    return confusion_matrix(y_test, y_pred)
     
     
 def high_cleanup(data):
@@ -46,8 +46,8 @@ def high_cleanup(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
         
-    return accuracy_score(y_test, y_pred);
-    #return confusion_matrix(y_test, y_pred)
+    #return accuracy_score(y_test, y_pred);
+    return confusion_matrix(y_test, y_pred)
     
     
     

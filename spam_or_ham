@@ -7,4 +7,4 @@ data = data.rename(columns = {'v1': 'label', 'v2': 'text'})
 
 print("Results for plain data", plain(data));
 print("Results for data with no stop words:", medium_cleanup(data));
-print("Results for data with stemmed words:", high_cleanup(data));
+#print("Results for data with stemmed words:", high_cleanup(data));
