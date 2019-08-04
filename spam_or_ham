@@ -1,0 +1,10 @@
+import pandas as pd
+from tests import plain, medium_cleanup, high_cleanup
+
+data = pd.read_csv("spam.csv", encoding = "latin-1");
+data = data[['v1', 'v2']]
+data = data.rename(columns = {'v1': 'label', 'v2': 'text'})
+
+print("Results for plain data", plain(data));
+print("Results for data with no stop words:", medium_cleanup(data));
+print("Results for data with stemmed words:", high_cleanup(data));
