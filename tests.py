@@ -1,7 +1,7 @@
 from sklearn.model_selection import train_test_split
 from helpers import review_messages, remove_stopWords, stem_words
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
 
 
 def plain(data):
@@ -16,7 +16,8 @@ def plain(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
     
-    return confusion_matrix(y_test, y_pred)
+    return accuracy_score(y_test, y_pred);
+    #return confusion_matrix(y_test, y_pred)
     
     
 def medium_cleanup(data):
@@ -30,7 +31,8 @@ def medium_cleanup(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
         
-    return confusion_matrix(y_test, y_pred)
+    return accuracy_score(y_test, y_pred);
+    #return confusion_matrix(y_test, y_pred)
     
     
 def high_cleanup(data):
@@ -44,7 +46,8 @@ def high_cleanup(data):
     X_test = vectorizer.transform(X_test)
     y_pred = model.predict(X_test)
         
-    return confusion_matrix(y_test, y_pred)
+    return accuracy_score(y_test, y_pred);
+    #return confusion_matrix(y_test, y_pred)
     
     
     
